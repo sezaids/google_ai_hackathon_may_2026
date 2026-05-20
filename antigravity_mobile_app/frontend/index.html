@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Service Orchestrator - Agentic Booking Platform</title>
+    <meta name="description" content="AI Service Orchestrator for the informal economy. Booking local plumbers, electricians, and painters using high-fidelity agentic orchestration.">
+    <!-- Main Style Sheet (loaded first — no external dependency) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: loaded ASYNC so it never blocks page render.
+         Page shows instantly with system fonts; upgrades when fonts arrive. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+          media="print"
+          onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    </noscript>
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <div class="glow-bg glow-bg-secondary"></div>
+
+    <main class="dashboard-wrapper">
+        <!-- Main Heading for SEO & Structure -->
+        <header class="app-header">
+            <h1 class="brand-title">AI Service Orchestrator <span class="badge">Active Agentic Loop</span></h1>
+            <p class="brand-subtitle">End-to-End Booking Lifecycle Automation for Lahore's Informal Economy</p>
+        </header>
+
+        <section class="workspace-grid">
+            <!-- Left Pane: Mobile Application Mockup -->
+            <article class="mockup-panel">
+                <div class="smartphone-frame">
+                    <div class="smartphone-notch"></div>
+                    <div class="smartphone-screen">
+                        <!-- Simulated Android/iOS Status Bar -->
+                        <div class="phone-status-bar">
+                            <span class="status-time" id="status-time-display">09:41 AM</span>
+                            <div class="status-icons">
+                                <span class="icon-wifi">📶</span>
+                                <span class="icon-signal">📶</span>
+                                <span class="icon-battery">🔋 98%</span>
+                            </div>
+                        </div>
+
+                        <!-- Phone App Header -->
+                        <header class="phone-app-header">
+                            <div class="agent-avatar-wrapper">
+                                <span class="agent-avatar">🤖</span>
+                                <span class="status-pulse-dot"></span>
+                            </div>
+                            <div class="agent-header-info">
+                                <span class="agent-name">Hamdam (ہمدم)</span>
+                                <span class="agent-tagline">AI Booking Agent (Online)</span>
+                            </div>
+                        </header>
+
+                        <!-- Main Phone Content Container -->
+                        <div class="phone-content" id="phone-content-view">
+                            
+                            <!-- User Dashboard Stats & History Section -->
+                            <section class="user-dashboard-section">
+                                <!-- Stats Chips Row -->
+                                <div class="stats-chips-row">
+                                    <div class="stats-chip">
+                                        <span class="chip-icon">📦</span>
+                                        <span class="chip-text">Total Orders: 5</span>
+                                    </div>
+                                    <div class="stats-chip">
+                                        <span class="chip-icon">❤️</span>
+                                        <span class="chip-text">Saved Workers: 3</span>
+                                    </div>
+                                </div>
+
+                                <!-- Horizontal Scroll History Section -->
+                                <div class="history-scroll-container">
+                                    <h3 class="section-title history-section-title">History</h3>
+                                    <div class="history-cards-scroll" id="history-cards-container">
+                                        <!-- Dynamically updated by app.js -->
+                                        <div class="history-card">
+                                            <div class="history-card-left">
+                                                <div class="history-card-header">
+                                                    <span class="history-worker-avatar">👨‍🔧</span>
+                                                    <div class="history-worker-info">
+                                                        <span class="history-worker-name">Kamran Ahmed</span>
+                                                        <span class="history-service-date">Plumber &bull; 10 May</span>
+                                                    </div>
+                                                </div>
+                                                <span class="history-badge status-completed">Completed</span>
+                                            </div>
+                                            <div class="history-card-right">
+                                                <button class="history-rebook-btn" data-worker="Kamran Ahmed" data-service="Plumber">Rebook</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="history-card">
+                                            <div class="history-card-left">
+                                                <div class="history-card-header">
+                                                    <span class="history-worker-avatar">⚡</span>
+                                                    <div class="history-worker-info">
+                                                        <span class="history-worker-name">M. Arsalan</span>
+                                                        <span class="history-service-date">Electrician &bull; 15 Apr</span>
+                                                    </div>
+                                                </div>
+                                                <span class="history-badge status-completed">Completed</span>
+                                            </div>
+                                            <div class="history-card-right">
+                                                <button class="history-rebook-btn" data-worker="M. Arsalan" data-service="Electrician">Rebook</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="history-card">
+                                            <div class="history-card-left">
+                                                <div class="history-card-header">
+                                                    <span class="history-worker-avatar">🪓</span>
+                                                    <div class="history-worker-info">
+                                                        <span class="history-worker-name">Tariq Mahmood</span>
+                                                        <span class="history-service-date">Carpenter &bull; 28 Mar</span>
+                                                    </div>
+                                                </div>
+                                                <span class="history-badge status-completed">Completed</span>
+                                            </div>
+                                            <div class="history-card-right">
+                                                <button class="history-rebook-btn" data-worker="Tariq Mahmood" data-service="Carpenter">Rebook</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Categories Quick Access Panel -->
+                            <section class="category-section">
+                                <h3 class="section-title">Quick Search Services</h3>
+                                <div class="category-grid" id="category-selector-grid">
+                                    <button class="category-card" data-service="Plumber" id="cat-plumber">
+                                        <span class="cat-icon">👨‍🔧</span>
+                                        <span class="cat-label">Plumber</span>
+                                    </button>
+                                    <button class="category-card" data-service="Electrician" id="cat-electrician">
+                                        <span class="cat-icon">⚡</span>
+                                        <span class="cat-label">Electrician</span>
+                                    </button>
+                                    <button class="category-card" data-service="Carpenter" id="cat-carpenter">
+                                        <span class="cat-icon">🪓</span>
+                                        <span class="cat-label">Carpenter</span>
+                                    </button>
+                                    <button class="category-card" data-service="Painter" id="cat-painter">
+                                        <span class="cat-icon">🎨</span>
+                                        <span class="cat-label">Painter</span>
+                                    </button>
+                                    <button class="category-card" data-service="Appliance Repair" id="cat-appliance">
+                                        <span class="cat-icon">📺</span>
+                                        <span class="cat-label">AC/Fridge</span>
+                                    </button>
+                                </div>
+                            </section>
+
+                            <!-- Live Active Booking Card (Displayed if booking exists) -->
+                            <section class="active-booking-section" id="active-booking-container" style="display: none;">
+                                <h3 class="section-title">Your Active Booking</h3>
+                                <div class="booking-card" id="active-booking-card">
+                                    <!-- Dynamically updated -->
+                                </div>
+                            </section>
+
+                            <!-- Chat Stream Container -->
+                            <section class="chat-wrapper" aria-label="Conversation window">
+                                <div class="chat-container" id="chat-messages-container">
+                                    <!-- Messages appended dynamically -->
+                                    <div class="message incoming animate-fade-in">
+                                        <div class="message-bubble">
+                                            <p>Assalam-o-Alaikum! Main aap ka digital helper.</p>
+                                            <span class="msg-time">Just Now</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="typing-loader" id="chat-typing-indicator" style="display: none;">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <!-- Phone Keyboard Input Bar -->
+                        <footer class="phone-input-bar">
+                            <input type="text" id="chat-user-input" placeholder="Type in Roman Urdu, Urdu or English..." aria-label="Type message">
+                            <button id="chat-send-btn" class="send-btn" aria-label="Send message">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </footer>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Right Pane: AI Execution Trace Dashboard -->
+            <article class="trace-panel">
+                <header class="panel-header">
+                    <div class="panel-title-wrapper">
+                        <div class="terminal-dot red"></div>
+                        <div class="terminal-dot yellow"></div>
+                        <div class="terminal-dot green"></div>
+                        <h2 class="panel-title">Orchestrator Execution Trace Console</h2>
+                    </div>
+                    <button class="reset-btn" id="system-reset-btn">Reset System</button>
+                </header>
+
+                <div class="panel-body">
+                    <!-- Agent State Machine Visualizer -->
+                    <section class="state-machine-section">
+                        <h3 class="small-title">Agent State Flow</h3>
+                        <div class="state-flow-path">
+                            <div class="state-node active" id="state-node-awaiting">
+                                <span class="node-number">1</span>
+                                <span class="node-text">Detect Intent</span>
+                            </div>
+                            <div class="state-line" id="state-line-1"></div>
+                            <div class="state-node" id="state-node-searching">
+                                <span class="node-number">2</span>
+                                <span class="node-text">Query Providers</span>
+                            </div>
+                            <div class="state-line" id="state-line-2"></div>
+                            <div class="state-node" id="state-node-slot">
+                                <span class="node-number">3</span>
+                                <span class="node-text">Select Slot</span>
+                            </div>
+                            <div class="state-line" id="state-line-3"></div>
+                            <div class="state-node" id="state-node-info">
+                                <span class="node-number">4</span>
+                                <span class="node-text">Client Details</span>
+                            </div>
+                            <div class="state-line" id="state-line-4"></div>
+                            <div class="state-node" id="state-node-booking">
+                                <span class="node-number">5</span>
+                                <span class="node-text">Booked</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Real-Time Trace Console Logs -->
+                    <section class="console-log-section">
+                        <h3 class="small-title">Live Reasoning Logs</h3>
+                        <div class="console-logs" id="execution-logs-container">
+                            <div class="console-msg system-msg">
+                                <span class="console-timestamp">[09:41:00 AM]</span>
+                                <span class="console-tag">[SYSTEM]</span>
+                                <span class="console-text">Google Antigravity orchestrator initialized. Awaiting user input to invoke tool pipelines...</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="app-footer-credits">
+        <p>AI Service Orchestrator Platform Built on Google Antigravity &bull; 2026</p>
+    </footer>
+
+    <!-- App JavaScript Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
